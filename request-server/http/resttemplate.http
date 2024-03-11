@@ -1,0 +1,7 @@
+POST localhost:8080/request/rest-template
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "RestTemplate Example"
+}

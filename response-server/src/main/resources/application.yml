@@ -4,3 +4,10 @@ server:
 spring:
   application:
     name: response-server
+
+cors:
+  allowed:
+    mapping: "/**"
+    origins: "http://localhost:8080"
+    headers: "*"
+    methods: POST

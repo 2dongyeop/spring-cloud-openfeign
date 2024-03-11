@@ -4,3 +4,11 @@ server:
 spring:
   application:
     name: request-server
+
+url:
+  server:
+    response: http://localhost:8081/response
+
+logging:
+  level:
+    web: debug
