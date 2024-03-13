@@ -10,9 +10,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -25,8 +27,10 @@ import java.util.ArrayList;
 @RequiredArgsConstructor
 public class RestTemplateService {
 
-    @Value("${url.server.response}")
+    @Value("${url.server.response.endpoint}")
     private String responseServerUrl;
+    @Value("${url.server.response.retry}")
+    private String retryRequestPath;
 
     private final RestTemplate restTemplate;
 
@@ -41,14 +45,25 @@ public class RestTemplateService {
      */
     public CommonResponse send(final CommonRequest request) {
         log.info("request[{}]", request);
+        settingHeader();
+        return restTemplate.postForObject(responseServerUrl, request, CommonResponse.class);
+    }
 
-        final ArrayList<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
+    /**
+     * RestTemplate은 Retry를 지원하지 않아, 아래처럼 Spring-Retry를 이용하여 구현
+     */
+    @Retryable(maxAttempts = 3)
+    public CommonResponse sendRetry(final CommonRequest request) {
+        log.info("request[{}]", request);
+        settingHeader();
+        return restTemplate.postForObject(responseServerUrl + retryRequestPath, request, CommonResponse.class);
+    }
 
+    private void settingHeader() {
         /* Header에 필요한 정보 삽입 */
+        final ArrayList<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
         interceptors.add(new RequestHeaderInterceptor(CommonConst.AUTHORIZATION, CommonConst.BEARER + "restTemplateExample"));
         interceptors.add(new RequestHeaderInterceptor(CommonConst.CONTENT_TYPE_KEY, MediaType.APPLICATION_JSON_VALUE));
         restTemplate.setInterceptors(interceptors);
-
-        return restTemplate.postForObject(responseServerUrl, request, CommonResponse.class);
     }
 }

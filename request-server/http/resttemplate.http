@@ -1,3 +1,4 @@
+#### Rest Template 정상 케이스 예시 ####
 POST localhost:8080/request/rest-template
 Content-Type: application/json
 
@@ -5,3 +6,14 @@ Content-Type: application/json
   "writer": "Lee Dongyeop",
   "message": "RestTemplate Example"
 }
+##########################################
+
+#### Rest Template Retry 케이스 예시 ####
+POST localhost:8080/request/rest-template/retry
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "RestTemplate Example"
+}
+##########################################

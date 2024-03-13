@@ -35,4 +35,10 @@ public class RequestEndpoint {
         log.info("request[{}]", request);
         return restTemplateService.send(request);
     }
+
+    @PostMapping(value = "/rest-template/retry", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResponse restTemplateRetry(@RequestBody final CommonRequest request) {
+        log.info("request[{}]", request);
+        return restTemplateService.sendRetry(request);
+    }
 }

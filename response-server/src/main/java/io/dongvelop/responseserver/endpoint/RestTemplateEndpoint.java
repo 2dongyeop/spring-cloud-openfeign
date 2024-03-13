@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 /**
@@ -18,7 +19,7 @@ import java.time.LocalDateTime;
  */
 @Slf4j
 @RestController
-@RequestMapping("/response")
+@RequestMapping("/response/rest-template")
 public class RestTemplateEndpoint {
 
     /**
@@ -29,7 +30,7 @@ public class RestTemplateEndpoint {
      * @return : 공통 응답 형태
      */
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public CommonResponse example(@RequestBody final CommonRequest request) {
+    public CommonResponse restTemplate(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
 
         return new CommonResponse(
@@ -37,5 +38,13 @@ public class RestTemplateEndpoint {
                 request.message(),
                 LocalDateTime.now()
         );
+    }
+
+    @PostMapping(value = "/retry", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResponse restTemplateRetry(@RequestBody final CommonRequest request) throws IOException {
+        log.info("request[{}]", request);
+
+        log.error("restTemplate retry test");
+        throw new IOException("restTemplate retry test");
     }
 }

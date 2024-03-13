@@ -7,7 +7,14 @@ spring:
 
 url:
   server:
-    response: http://localhost:8081/response
+    response:
+      endpoint: http://localhost:8081/response/rest-template
+      retry: /retry
+
+
+restTemplate:
+  connectTimeOut: 5
+  readTimeOut: 5
 
 logging:
   level:

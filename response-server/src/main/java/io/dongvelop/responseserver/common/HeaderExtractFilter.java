@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * @author 이동엽(Lee Dongyeop)
@@ -21,10 +22,12 @@ public class HeaderExtractFilter extends OncePerRequestFilter {
                                     final HttpServletResponse response,
                                     final FilterChain filterChain) throws ServletException, IOException {
 
+        final String requestURI = request.getRequestURI();
         final String authorization = request.getHeader(CommonConst.AUTHORIZATION);
         final String contentType = request.getHeader(CommonConst.CONTENT_TYPE_KEY);
 
         log.info("============ Header Start ============");
+        log.info("requestURI[{}]", requestURI);
         log.info("authorization[{}]", authorization);
         log.info("contentType[{}]", contentType);
         log.info("============= Header End =============");
