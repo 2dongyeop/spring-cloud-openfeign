@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69eb9b6b-d4c3-4581-88c7-46c6a0a5ef59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/http/webclient.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/WebClientEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/WebClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/resttemplate.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/resttemplate.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/RequestServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/RequestServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/config/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RequestEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RequestEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/resttemplate/RestTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/resttemplate/RestTemplateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/common/CommonConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/common/CommonConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RequestEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RestTemplateEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/resttemplate/RestTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/RestTemplateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/common/HeaderExtractFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/common/HeaderExtractFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/RestTemplateEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/RestTemplateEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/RestTemplateEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/CommonEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/payload/response/CommonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/payload/response/CommonResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,10 @@
     "HTTP Request.All in resttemplate.executor": "Run",
     "HTTP Request.resttemplate | #1.executor": "Run",
     "HTTP Request.resttemplate | #2.executor": "Run",
+    "HTTP Request.resttemplate | Rest Template 정상 케이스 예시 ########.executor": "Run",
+    "HTTP Request.webclient | #2.executor": "Run",
+    "HTTP Request.webclient | #3.executor": "Run",
+    "HTTP Request.webclient | WebClient 정상 케이스 예시 ########.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -80,17 +85,24 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.dongvelop.requestserver.service.webclient" />
       <recent name="io.dongvelop.requestserver.payload.response" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RequestServerApplication">
-    <configuration name="All in resttemplate" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http/resttemplate.http">
-      <method v="2" />
-    </configuration>
-    <configuration name="resttemplate | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/resttemplate.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="resttemplate | Rest Template 정상 케이스 예시 ########" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/resttemplate.http" requestIdentifier="Rest Template 정상 케이스 예시 ########" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="resttemplate | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/resttemplate.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="webclient | WebClient 정상 케이스 예시 ########" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/webclient.http" requestIdentifier="WebClient 정상 케이스 예시 ########" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="webclient | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/webclient.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="webclient | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/webclient.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="RequestServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -102,9 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.webclient | #3" />
+        <item itemvalue="HTTP Request.webclient | #2" />
+        <item itemvalue="HTTP Request.webclient | WebClient 정상 케이스 예시 ########" />
         <item itemvalue="HTTP Request.resttemplate | #2" />
-        <item itemvalue="HTTP Request.resttemplate | #1" />
-        <item itemvalue="HTTP Request.All in resttemplate" />
+        <item itemvalue="HTTP Request.resttemplate | Rest Template 정상 케이스 예시 ########" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +142,7 @@
       <workItem from="1709820463390" duration="37000" />
       <workItem from="1710160188254" duration="6480000" />
       <workItem from="1710167593892" duration="147000" />
-      <workItem from="1710331108160" duration="4631000" />
+      <workItem from="1710331108160" duration="13628000" />
     </task>
     <servers />
   </component>

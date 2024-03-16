@@ -8,7 +8,7 @@ spring:
 url:
   server:
     response:
-      endpoint: http://localhost:8081/response/rest-template
+      endpoint: http://localhost:8081/response
       retry: /retry
 
 
@@ -16,6 +16,18 @@ restTemplate:
   connectTimeOut: 5
   readTimeOut: 5
 
+webClient:
+  maxMemorySize: 2097152 # 2 * 1024 * 1024
+  timeout:
+    connect: 5000
+    response: 5
+    read: 5
+    write: 5
+  retry:
+    maxAttempt: 3
+    delay: 1
+
 logging:
   level:
     web: debug
+    reactor: debug

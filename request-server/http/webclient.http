@@ -1,0 +1,29 @@
+#### WebClient 정상 케이스 예시 ####
+POST localhost:8080/request/web-client
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "WebClient Example"
+}
+##########################################
+
+#### WebClient Retry 케이스 예시 ####
+POST localhost:8080/request/web-client/retry
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "WebClient Example"
+}
+##########################################
+
+#### WebClient : 에러 코드별로 분리 처리 예시 ####
+POST localhost:8080/request/web-client/error
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "WebClient Example"
+}
+##########################################

@@ -1,4 +1,4 @@
-package io.dongvelop.requestserver.service.resttemplate;
+package io.dongvelop.requestserver.service;
 
 import io.dongvelop.requestserver.common.CommonConst;
 import io.dongvelop.requestserver.common.RequestHeaderInterceptor;
@@ -36,7 +36,7 @@ public class RestTemplateService {
 
     /**
      * RestTemplate 으로 응답 서버에 요청보내기 <br/>
-     * - Retry 및 TimeOut을 제공하지 않음. <br/>
+     * - Retry를 제공하지 않음. <br/>
      * - 비즈니스 코드에 지저분한 설정 코드들이 섞임. <br/>
      * - OpenFeign에 비해 제공되는 로그가 불친절함
      *
@@ -62,7 +62,7 @@ public class RestTemplateService {
     private void settingHeader() {
         /* Header에 필요한 정보 삽입 */
         final ArrayList<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
-        interceptors.add(new RequestHeaderInterceptor(CommonConst.AUTHORIZATION, CommonConst.BEARER + "restTemplateExample"));
+        interceptors.add(new RequestHeaderInterceptor(CommonConst.AUTHORIZATION, CommonConst.BEARER));
         interceptors.add(new RequestHeaderInterceptor(CommonConst.CONTENT_TYPE_KEY, MediaType.APPLICATION_JSON_VALUE));
         restTemplate.setInterceptors(interceptors);
     }

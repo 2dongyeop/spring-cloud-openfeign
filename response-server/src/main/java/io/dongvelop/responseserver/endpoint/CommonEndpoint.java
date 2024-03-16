@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 /**
  * @author 이동엽(Lee Dongyeop)
@@ -19,8 +18,8 @@ import java.time.LocalDateTime;
  */
 @Slf4j
 @RestController
-@RequestMapping("/response/rest-template")
-public class RestTemplateEndpoint {
+@RequestMapping("/response")
+public class CommonEndpoint {
 
     /**
      * 공통 요청 Endpoint <br/>
@@ -33,18 +32,21 @@ public class RestTemplateEndpoint {
     public CommonResponse restTemplate(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
 
-        return new CommonResponse(
-                request.writer(),
-                request.message(),
-                LocalDateTime.now()
-        );
+        return CommonResponse.of(request);
     }
 
+    /**
+     * Retry 실행을 보여주기 위한 Endpoint <br/>
+     *
+     * @param request : 공통 요청 형태
+     * @return : 공통 응답 형태
+     * @throws IOException
+     */
     @PostMapping(value = "/retry", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public CommonResponse restTemplateRetry(@RequestBody final CommonRequest request) throws IOException {
         log.info("request[{}]", request);
 
-        log.error("restTemplate retry test");
+        log.error("start retry test");
         throw new IOException("restTemplate retry test");
     }
 }

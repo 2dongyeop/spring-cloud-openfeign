@@ -1,5 +1,7 @@
 package io.dongvelop.responseserver.payload.response;
 
+import io.dongvelop.responseserver.payload.request.CommonRequest;
+
 import java.time.LocalDateTime;
 
 /**
@@ -12,4 +14,11 @@ public record CommonResponse(
         String message,
         LocalDateTime responseTime
 ) {
+    public static CommonResponse of(final CommonRequest request) {
+        return new CommonResponse(
+                request.writer(),
+                request.message(),
+                LocalDateTime.now()
+        );
+    }
 }

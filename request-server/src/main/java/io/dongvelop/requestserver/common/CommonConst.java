@@ -16,5 +16,5 @@ public final class CommonConst {
      */
     public static final String AUTHORIZATION = "Authorization";
     public static final String CONTENT_TYPE_KEY = "Content-Type";
-    public static final String BEARER = "Bearer ";
+    public static final String BEARER = "Bearer ya29.example.dongyeop";
 }
