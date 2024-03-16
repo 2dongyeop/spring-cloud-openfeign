@@ -2,7 +2,7 @@ package io.dongvelop.requestserver.endpoint;
 
 import io.dongvelop.requestserver.payload.request.CommonRequest;
 import io.dongvelop.requestserver.payload.response.CommonResponse;
-import io.dongvelop.requestserver.service.RestTemplateService;
+import io.dongvelop.requestserver.service.HttpInterfaceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -13,19 +13,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author 이동엽(Lee Dongyeop)
- * @date 2024. 03. 11
- * @description RestTemplate 호출 Endpoint
+ * @date 2024. 03. 16
+ * @description HttpInterface 호출 Endpoint
  */
 @Slf4j
 @RestController
-@RequestMapping("/request/rest-template")
+@RequestMapping("/request/http-interface")
 @RequiredArgsConstructor
-public class RestTemplateEndpoint {
+public class HttpInterfaceEndpoint {
 
-    private final RestTemplateService restTemplateService;
+    private final HttpInterfaceService httpInterfaceService;
 
     /**
-     * RestTemplate 으로 외부 API를 호출하는 예시
+     * HttpInterface로 외부 API를 호출하는 예시
      *
      * @param request : 공통 요청 형태
      * @return : 공통 응답 형태
@@ -33,11 +33,11 @@ public class RestTemplateEndpoint {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public CommonResponse send(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
-        return restTemplateService.send(request);
+        return httpInterfaceService.send(request);
     }
 
     /**
-     * RestTemplate Retry를 보여주는 예시
+     * HttpInterface Retry를 보여주는 예시
      *
      * @param request : 공통 요청 형태
      * @return : 공통 응답 형태
@@ -45,6 +45,18 @@ public class RestTemplateEndpoint {
     @PostMapping(value = "/retry", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public CommonResponse retry(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
-        return restTemplateService.sendRetry(request);
+        return httpInterfaceService.sendRetry(request);
+    }
+
+    /**
+     * HttpInterface - 에러 코드별로 분리 처리 예시
+     *
+     * @param request : 공통 요청 형태
+     * @return : 공통 응답 형태
+     */
+    @PostMapping(value = "/error", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResponse get500error(@RequestBody final CommonRequest request) {
+        log.info("request[{}]", request);
+        return httpInterfaceService.get500status(request);
     }
 }

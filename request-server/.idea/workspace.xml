@@ -5,24 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69eb9b6b-d4c3-4581-88c7-46c6a0a5ef59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/http/restclient.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/config/RestClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RestClientEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/RestClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http/httpinterface.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/HttpInterfaceEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/ExampleHttpInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/HttpInterfaceBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/HttpInterfaceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/resttemplate.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/resttemplate.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/webclient.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/webclient.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/CommonEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/CommonEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RestClientEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RestClientEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RestTemplateEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/RestTemplateEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/WebClientEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/WebClientEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/RestClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/RestClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,6 +63,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "HTTP Request.All in resttemplate.executor": "Run",
+    "HTTP Request.httpinterface | #2.executor": "Run",
+    "HTTP Request.httpinterface | #3.executor": "Run",
+    "HTTP Request.httpinterface | HttpInterface 정상 케이스 예시 ########.executor": "Run",
     "HTTP Request.restclient | #2.executor": "Run",
     "HTTP Request.restclient | #3.executor": "Run",
     "HTTP Request.restclient | RestClient 정상 케이스 예시 ########.executor": "Run",
@@ -80,29 +89,31 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.dongvelop.requestserver.service" />
       <recent name="io.dongvelop.requestserver.service.webclient" />
       <recent name="io.dongvelop.requestserver.payload.response" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RequestServerApplication">
+    <configuration name="httpinterface | HttpInterface 정상 케이스 예시 ########" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/httpinterface.http" requestIdentifier="HttpInterface 정상 케이스 예시 ########" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="httpinterface | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/httpinterface.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="httpinterface | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/httpinterface.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="restclient | RestClient 정상 케이스 예시 ########" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/restclient.http" requestIdentifier="RestClient 정상 케이스 예시 ########" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="restclient | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/restclient.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="restclient | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/restclient.http" index="3" requestIdentifier="#3" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="webclient | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/webclient.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="webclient | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/webclient.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="RequestServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -114,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.httpinterface | HttpInterface 정상 케이스 예시 ########" />
+        <item itemvalue="HTTP Request.httpinterface | #3" />
+        <item itemvalue="HTTP Request.httpinterface | #2" />
         <item itemvalue="HTTP Request.restclient | RestClient 정상 케이스 예시 ########" />
         <item itemvalue="HTTP Request.restclient | #2" />
-        <item itemvalue="HTTP Request.restclient | #3" />
-        <item itemvalue="HTTP Request.webclient | #3" />
-        <item itemvalue="HTTP Request.webclient | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +153,7 @@
       <workItem from="1709820463390" duration="37000" />
       <workItem from="1710160188254" duration="6480000" />
       <workItem from="1710167593892" duration="147000" />
-      <workItem from="1710331108160" duration="17800000" />
+      <workItem from="1710331108160" duration="20835000" />
     </task>
     <servers />
   </component>

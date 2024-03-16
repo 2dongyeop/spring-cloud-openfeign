@@ -31,7 +31,7 @@ public class RestClientEndpoint {
      * @return : 공통 응답 형태
      */
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public CommonResponse webClient(@RequestBody final CommonRequest request) {
+    public CommonResponse send(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
         return restClientService.send(request);
     }
@@ -43,7 +43,7 @@ public class RestClientEndpoint {
      * @return : 공통 응답 형태
      */
     @PostMapping(value = "/retry", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public CommonResponse webClientRetry(@RequestBody final CommonRequest request) {
+    public CommonResponse retry(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
         return restClientService.sendRetry(request);
     }

@@ -79,7 +79,7 @@ public class WebClientService {
                 .retrieve()
                 .onStatus(HttpStatusCode::is5xxServerError, response -> Mono.error(new WebClientResponseException(
                                 response.statusCode().value(),
-                                String.format("5xx error found. %s", response.bodyToMono(String.class)),
+                                String.format("5xx error. %s", response.bodyToMono(String.class)),
                                 response.headers().asHttpHeaders(), null, null
                         )
                 ))

@@ -11,11 +11,6 @@ import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-import org.springframework.web.reactive.function.client.WebClientResponseException;
-import reactor.core.publisher.Mono;
-import reactor.util.retry.Retry;
-
-import java.time.Duration;
 
 /**
  * @author 이동엽(Lee Dongyeop)
@@ -72,11 +67,11 @@ public class RestClientService {
                 .body(request)
                 .retrieve()
                 .onStatus(HttpStatusCode::is4xxClientError, (httpRequest, httpResponse) -> {
-                    log.error("{} server error : [{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
+                    log.error("errorStatus[{}], errorText[{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
                     throw new RuntimeException();
                 })
                 .onStatus(HttpStatusCode::is5xxServerError, (httpRequest, httpResponse) -> {
-                    log.error("{} server error : [{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
+                    log.error("errorStatus[{}], errorText[{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
                     throw new RuntimeException();
                 })
                 .body(CommonResponse.class);
