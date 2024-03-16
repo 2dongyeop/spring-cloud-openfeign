@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
   "writer": "Lee Dongyeop",
-  "message": "WebClient Example"
+  "message": "WebClient Retry Example"
 }
 ##########################################
 
@@ -24,6 +24,6 @@ Content-Type: application/json
 
 {
   "writer": "Lee Dongyeop",
-  "message": "WebClient Example"
+  "message": "WebClient Error Handling Example"
 }
 ##########################################

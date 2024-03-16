@@ -47,6 +47,6 @@ public class CommonEndpoint {
         log.info("request[{}]", request);
 
         log.error("start retry test");
-        throw new IOException("restTemplate retry test");
+        throw new IOException("retry test");
     }
 }
