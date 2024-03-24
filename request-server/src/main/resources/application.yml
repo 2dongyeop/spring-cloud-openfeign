@@ -17,6 +17,9 @@ spring:
             connect-timeout: 1000
             read-timeout: 1000
             logger-level: FULL
+            request-interceptors:
+              - io.dongvelop.requestserver.common.AuthorizationRequestInterceptor
+
       retry:
         openFeignClient:
           period: 100
