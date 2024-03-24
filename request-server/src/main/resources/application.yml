@@ -17,6 +17,12 @@ spring:
             connect-timeout: 1000
             read-timeout: 1000
             logger-level: FULL
+      retry:
+        openFeignClient:
+          period: 100
+          duration: 3
+          maxAttempt: 3
+
 
 url:
   server:

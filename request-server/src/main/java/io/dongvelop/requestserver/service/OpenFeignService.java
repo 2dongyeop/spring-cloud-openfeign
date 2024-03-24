@@ -36,4 +36,13 @@ public class OpenFeignService {
 
         return feignClient.sendTimeout(request);
     }
+
+    /**
+     * FeignClient 재시도 예시
+     */
+    public CommonResponse sendRetry(final CommonRequest request) {
+        log.info("request[{}]", request);
+
+        return feignClient.sendRetry(request);
+    }
 }

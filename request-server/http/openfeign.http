@@ -17,3 +17,13 @@ Content-Type: application/json
   "message": "OpenFeign Timeout Example"
 }
 ##########################################
+
+#### OpenFeign Retry 케이스 예시 ####
+POST localhost:8080/request/open-feign/timeout
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "OpenFeign Retry Example"
+}
+##########################################

@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69eb9b6b-d4c3-4581-88c7-46c6a0a5ef59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/config/FeignClientRetryConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/openfeign.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/openfeign.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/OpenFeignEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/endpoint/OpenFeignEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/OpenFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/OpenFeignClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/OpenFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/OpenFeignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/CommonEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../response-server/src/main/java/io/dongvelop/responseserver/endpoint/CommonEndpoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
       <list>
         <option value="Record" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,6 +65,7 @@
     "HTTP Request.httpinterface | #3.executor": "Run",
     "HTTP Request.httpinterface | HttpInterface 정상 케이스 예시 ########.executor": "Run",
     "HTTP Request.openfeign | #2.executor": "Run",
+    "HTTP Request.openfeign | #3.executor": "Run",
     "HTTP Request.openfeign | RestClient 정상 케이스 예시 ########.executor": "Run",
     "HTTP Request.restclient | #2.executor": "Run",
     "HTTP Request.restclient | #3.executor": "Run",
@@ -104,9 +105,6 @@
     <configuration name="httpinterface | HttpInterface 정상 케이스 예시 ########" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/httpinterface.http" requestIdentifier="HttpInterface 정상 케이스 예시 ########" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="httpinterface | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/httpinterface.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="httpinterface | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/httpinterface.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -114,6 +112,9 @@
       <method v="2" />
     </configuration>
     <configuration name="openfeign | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/openfeign.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="openfeign | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/openfeign.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="RequestServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -125,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.openfeign | #3" />
         <item itemvalue="HTTP Request.openfeign | #2" />
         <item itemvalue="HTTP Request.openfeign | RestClient 정상 케이스 예시 ########" />
         <item itemvalue="HTTP Request.httpinterface | HttpInterface 정상 케이스 예시 ########" />
         <item itemvalue="HTTP Request.httpinterface | #3" />
-        <item itemvalue="HTTP Request.httpinterface | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +154,7 @@
       <workItem from="1709820463390" duration="37000" />
       <workItem from="1710160188254" duration="6480000" />
       <workItem from="1710167593892" duration="147000" />
-      <workItem from="1710331108160" duration="26753000" />
+      <workItem from="1710331108160" duration="29228000" />
     </task>
     <servers />
   </component>
