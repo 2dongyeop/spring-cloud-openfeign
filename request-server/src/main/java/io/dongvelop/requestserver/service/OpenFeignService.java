@@ -26,4 +26,14 @@ public class OpenFeignService {
 
         return feignClient.send(request);
     }
+
+    /**
+     * FeignClient Timeout 설정 확인 예시
+     * Timeout을 1초로 제한했을 때, 응답 서버에서는 3초 뒤에 응답을 주는 상황
+     */
+    public CommonResponse sendTimeout(final CommonRequest request) {
+        log.info("request[{}]", request);
+
+        return feignClient.sendTimeout(request);
+    }
 }

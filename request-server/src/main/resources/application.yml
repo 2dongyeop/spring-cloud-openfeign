@@ -5,11 +5,25 @@ spring:
   application:
     name: request-server
 
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 5000
+            read-timeout: 5000
+            logger-level: BASIC
+          openFeignClient:
+            connect-timeout: 1000
+            read-timeout: 1000
+            logger-level: FULL
+
 url:
   server:
     response:
       endpoint: http://localhost:8081/response
       retry: /retry
+      timeout: /timeout
 
 
 restTemplate:
@@ -31,3 +45,5 @@ logging:
   level:
     web: debug
     reactor: debug
+    feign: debug
+    io.dongvelop.requestserver.service: debug

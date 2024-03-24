@@ -1,9 +1,19 @@
-#### RestClient 정상 케이스 예시 ####
+#### OpenFeign 정상 케이스 예시 ####
 POST localhost:8080/request/open-feign
 Content-Type: application/json
 
 {
   "writer": "Lee Dongyeop",
   "message": "OpenFeign Example"
+}
+##########################################
+
+#### OpenFeign Timeout 호출 예시 ####
+POST localhost:8080/request/open-feign/timeout
+Content-Type: application/json
+
+{
+  "writer": "Lee Dongyeop",
+  "message": "OpenFeign Timeout Example"
 }
 ##########################################

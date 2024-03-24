@@ -17,4 +17,7 @@ public interface OpenFeignClient {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     CommonResponse send(@RequestBody CommonRequest request);
+
+    @PostMapping(path = "${url.server.response.timeout}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    CommonResponse sendTimeout(@RequestBody CommonRequest request);
 }

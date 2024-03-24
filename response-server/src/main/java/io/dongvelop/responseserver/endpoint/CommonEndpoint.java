@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
+import static java.lang.Thread.sleep;
+
 /**
  * @author 이동엽(Lee Dongyeop)
  * @date 2024. 03. 11
@@ -48,5 +50,14 @@ public class CommonEndpoint {
 
         log.error("start retry test");
         throw new IOException("retry test");
+    }
+
+    @PostMapping(value = "/timeout", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResponse commonTimeoutEndpoint(@RequestBody final CommonRequest request) throws InterruptedException {
+        log.info("request[{}]", request);
+
+        log.info("start timeout test - sleep 3 seconds");
+        sleep(3000);
+        return CommonResponse.of(request);
     }
 }
