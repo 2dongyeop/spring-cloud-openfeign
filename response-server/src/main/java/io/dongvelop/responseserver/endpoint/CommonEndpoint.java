@@ -29,7 +29,7 @@ public class CommonEndpoint {
      * @return : 공통 응답 형태
      */
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public CommonResponse restTemplate(@RequestBody final CommonRequest request) {
+    public CommonResponse commonEndpoint(@RequestBody final CommonRequest request) {
         log.info("request[{}]", request);
 
         return CommonResponse.of(request);
@@ -43,7 +43,7 @@ public class CommonEndpoint {
      * @throws IOException
      */
     @PostMapping(value = "/retry", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public CommonResponse restTemplateRetry(@RequestBody final CommonRequest request) throws IOException {
+    public CommonResponse commonRetryEndpoint(@RequestBody final CommonRequest request) throws IOException {
         log.info("request[{}]", request);
 
         log.error("start retry test");

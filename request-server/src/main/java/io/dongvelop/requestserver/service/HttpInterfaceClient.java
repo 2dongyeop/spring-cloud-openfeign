@@ -11,7 +11,7 @@ import org.springframework.web.service.annotation.PostExchange;
  * @date 2024. 03. 16
  * @description Spring 6에 추가된 HttpInterface
  */
-public interface ExampleHttpInterface {
+public interface HttpInterfaceClient {
 
     @PostExchange(contentType = MediaType.APPLICATION_JSON_VALUE, accept = MediaType.APPLICATION_JSON_VALUE)
     CommonResponse send(@RequestBody CommonRequest request);

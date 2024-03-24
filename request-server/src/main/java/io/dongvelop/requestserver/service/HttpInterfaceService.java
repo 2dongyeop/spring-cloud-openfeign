@@ -30,7 +30,7 @@ public class HttpInterfaceService {
         log.info("request[{}]", request);
 
         return HttpInterfaceBuilder
-                .builder(restClient, ExampleHttpInterface.class)
+                .builder(restClient, HttpInterfaceClient.class)
                 .send(request);
     }
 
@@ -43,7 +43,7 @@ public class HttpInterfaceService {
         log.info("request[{}]", request);
 
         return HttpInterfaceBuilder
-                .builder(restClient, ExampleHttpInterface.class)
+                .builder(restClient, HttpInterfaceClient.class)
                 .sendRetry(request);
     }
 
@@ -61,7 +61,7 @@ public class HttpInterfaceService {
                 .build();
 
         return HttpInterfaceBuilder
-                .builder(reBuildRestClient, ExampleHttpInterface.class)
+                .builder(reBuildRestClient, HttpInterfaceClient.class)
                 .get500Error(request);
     }
 }
