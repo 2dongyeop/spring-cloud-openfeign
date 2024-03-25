@@ -2,6 +2,7 @@ package io.dongvelop.requestserver.common;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
+import io.dongvelop.requestserver.common.CommonConst;
 import lombok.extern.slf4j.Slf4j;
 
 /**

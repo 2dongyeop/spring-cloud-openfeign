@@ -45,4 +45,13 @@ public class OpenFeignService {
 
         return feignClient.sendRetry(request);
     }
+
+    /**
+     * FeignClient Error Decoder 예시
+     */
+    public CommonResponse sendBadRequest(final CommonRequest request) {
+        log.info("request[{}]", request);
+
+        return feignClient.sendBadRequest(request);
+    }
 }

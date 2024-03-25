@@ -54,4 +54,13 @@ public class OpenFeignEndpoint {
         log.info("request[{}]", request);
         return openFeignService.sendRetry(request);
     }
+
+    /**
+     * FeignClient Retry 설정 확인 예시
+     */
+    @PostMapping(value = "/bad-request", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResponse sendBadRequest(@RequestBody final CommonRequest request) {
+        log.info("request[{}]", request);
+        return openFeignService.sendBadRequest(request);
+    }
 }
