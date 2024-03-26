@@ -14,8 +14,8 @@ spring:
             read-timeout: 5000
             logger-level: BASIC
           openFeignClient:
-            connect-timeout: 1000
-            read-timeout: 1000
+            connect-timeout: 10000
+            read-timeout: 10000
             logger-level: FULL
             request-interceptors:
               - io.dongvelop.requestserver.common.AuthorizationRequestInterceptor

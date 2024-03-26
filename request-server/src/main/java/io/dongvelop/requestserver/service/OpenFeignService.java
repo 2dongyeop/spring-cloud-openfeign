@@ -23,7 +23,6 @@ public class OpenFeignService {
      */
     public CommonResponse send(final CommonRequest request) {
         log.info("request[{}]", request);
-
         return feignClient.send(request);
     }
 
@@ -33,7 +32,6 @@ public class OpenFeignService {
      */
     public CommonResponse sendTimeout(final CommonRequest request) {
         log.info("request[{}]", request);
-
         return feignClient.sendTimeout(request);
     }
 
@@ -42,7 +40,6 @@ public class OpenFeignService {
      */
     public CommonResponse sendRetry(final CommonRequest request) {
         log.info("request[{}]", request);
-
         return feignClient.sendRetry(request);
     }
 
@@ -51,7 +48,6 @@ public class OpenFeignService {
      */
     public CommonResponse sendBadRequest(final CommonRequest request) {
         log.info("request[{}]", request);
-
         return feignClient.sendBadRequest(request);
     }
 }

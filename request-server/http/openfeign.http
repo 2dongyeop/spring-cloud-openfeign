@@ -19,7 +19,7 @@ Content-Type: application/json
 ##########################################
 
 #### OpenFeign Retry 케이스 예시 ####
-POST localhost:8080/request/open-feign/timeout
+POST localhost:8080/request/open-feign/retry
 Content-Type: application/json
 
 {

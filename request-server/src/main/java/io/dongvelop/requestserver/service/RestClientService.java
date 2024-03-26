@@ -1,5 +1,6 @@
 package io.dongvelop.requestserver.service;
 
+import io.dongvelop.requestserver.common.CustomException;
 import io.dongvelop.requestserver.payload.request.CommonRequest;
 import io.dongvelop.requestserver.payload.response.CommonResponse;
 import lombok.RequiredArgsConstructor;
@@ -68,11 +69,11 @@ public class RestClientService {
                 .retrieve()
                 .onStatus(HttpStatusCode::is4xxClientError, (httpRequest, httpResponse) -> {
                     log.error("errorStatus[{}], errorText[{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
-                    throw new RuntimeException();
+                    throw new CustomException("restclient 4xx error catch");
                 })
                 .onStatus(HttpStatusCode::is5xxServerError, (httpRequest, httpResponse) -> {
                     log.error("errorStatus[{}], errorText[{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
-                    throw new RuntimeException();
+                    throw new CustomException("restclient 5xx error catch");
                 })
                 .body(CommonResponse.class);
     }

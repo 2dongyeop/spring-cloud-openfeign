@@ -14,7 +14,7 @@ public class CustomErrorDecoder implements ErrorDecoder {
 
     @Override
     public Exception decode(final String methodKey, final Response response) {
-        log.warn("statusCode[{}], methodKey[{}]", response.status(), methodKey);
+        log.error("statusCode[{}], methodKey[{}]", response.status(), methodKey);
 
         return switch (response.status()) {
             case 400 -> new CustomException("bad request", 400);

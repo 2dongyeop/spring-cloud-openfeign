@@ -1,5 +1,6 @@
 package io.dongvelop.requestserver.service;
 
+import io.dongvelop.requestserver.common.CustomException;
 import io.dongvelop.requestserver.payload.request.CommonRequest;
 import io.dongvelop.requestserver.payload.response.CommonResponse;
 import lombok.RequiredArgsConstructor;
@@ -56,7 +57,7 @@ public class HttpInterfaceService {
         final RestClient reBuildRestClient = restClient.mutate()
                 .defaultStatusHandler(HttpStatusCode::isError, (httpRequest, httpResponse) -> {
                     log.error("errorStatus[{}], errorText[{}]", httpResponse.getStatusCode(), httpResponse.getStatusText());
-                    throw new RuntimeException();
+                    throw new CustomException("http interface error catch");
                 })
                 .build();
 
