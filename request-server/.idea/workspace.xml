@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69eb9b6b-d4c3-4581-88c7-46c6a0a5ef59" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/openfeign.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/openfeign.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/common/CustomErrorDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/HttpInterfaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/HttpInterfaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/OpenFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/OpenFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/RestClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/dongvelop/requestserver/service/RestClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +152,7 @@
       <workItem from="1709820463390" duration="37000" />
       <workItem from="1710160188254" duration="6480000" />
       <workItem from="1710167593892" duration="147000" />
-      <workItem from="1710331108160" duration="38959000" />
+      <workItem from="1710331108160" duration="39786000" />
     </task>
     <servers />
   </component>
